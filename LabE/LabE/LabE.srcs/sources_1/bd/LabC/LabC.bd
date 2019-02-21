@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x0" bd:device="xc7a35tcpg236-1" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.4" bd:top="LabC" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>LabC</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="LabC_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>LabC_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>FullAdder_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="FullAdder" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">LabC_FullAdder_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">FullAdder</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>FullAdder_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="FullAdder" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">LabC_FullAdder_1_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">FullAdder</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>FullAdder_2</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="FullAdder" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">LabC_FullAdder_2_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">FullAdder</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>FullAdder_3</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="FullAdder" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">LabC_FullAdder_3_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">FullAdder</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>FullAdder_4</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="FullAdder" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">LabC_FullAdder_4_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">FullAdder</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>FullAdder_5</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="FullAdder" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">LabC_FullAdder_5_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">FullAdder</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>Ripple_Adder_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="Ripple_Adder" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">LabC_Ripple_Adder_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">Ripple_Adder</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>FullAdder_0_cout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_0" spirit:portRef="cout"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_1" spirit:portRef="cin"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>FullAdder_1_cout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_1" spirit:portRef="cout"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_2" spirit:portRef="cin"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>FullAdder_2_cout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_2" spirit:portRef="cout"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_3" spirit:portRef="cin"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>FullAdder_3_cout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_3" spirit:portRef="cout"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_5" spirit:portRef="cin"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>FullAdder_5_cout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_5" spirit:portRef="cout"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_4" spirit:portRef="cin"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Net</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_4" spirit:portRef="a"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_5" spirit:portRef="a"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_3" spirit:portRef="a"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_2" spirit:portRef="a"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_1" spirit:portRef="a"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_0" spirit:portRef="a"/>
+        <spirit:internalPortReference spirit:componentRef="Ripple_Adder_0" spirit:portRef="x"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Net1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_4" spirit:portRef="b"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_2" spirit:portRef="b"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_1" spirit:portRef="b"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_0" spirit:portRef="b"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_5" spirit:portRef="b"/>
+        <spirit:internalPortReference spirit:componentRef="FullAdder_3" spirit:portRef="b"/>
+        <spirit:internalPortReference spirit:componentRef="Ripple_Adder_0" spirit:portRef="y"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>

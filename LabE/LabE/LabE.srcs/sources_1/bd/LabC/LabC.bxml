@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="33">
+  <CompositeFile CompositeFileTopName="LabC" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1550761520"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1550761520"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1550761520"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1550761520"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="ip\LabC_Ripple_Adder_0_0\LabC_Ripple_Adder_0_0.xci" Type="IP">
+        <Instance HierarchyPath="Ripple_Adder_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1549990609" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\LabC_FullAdder_0_0\LabC_FullAdder_0_0.xci" Type="IP">
+        <Instance HierarchyPath="FullAdder_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1549990610" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\LabC_FullAdder_1_0\LabC_FullAdder_1_0.xci" Type="IP">
+        <Instance HierarchyPath="FullAdder_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1549990610" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\LabC_FullAdder_2_0\LabC_FullAdder_2_0.xci" Type="IP">
+        <Instance HierarchyPath="FullAdder_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1549990611" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\LabC_FullAdder_3_0\LabC_FullAdder_3_0.xci" Type="IP">
+        <Instance HierarchyPath="FullAdder_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1549990611" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\LabC_FullAdder_4_0\LabC_FullAdder_4_0.xci" Type="IP">
+        <Instance HierarchyPath="FullAdder_4"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1549990612" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\LabC_FullAdder_5_0\LabC_FullAdder_5_0.xci" Type="IP">
+        <Instance HierarchyPath="FullAdder_5"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1549990612" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+    </FileCollection>
+  </CompositeFile>
+</Root>

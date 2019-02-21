@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/3C7/LabC/LabC-20190212T152347Z-001/LabC/6bit_ripple_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ripple_Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/3C7/LabC/LabC-20190212T152347Z-001/LabC/full_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FullAdder
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/3C7/LabC/LabC-20190212T152347Z-001/LabC/6bit_ripple_adder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ripple_Adder_tb

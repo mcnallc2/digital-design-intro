@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Feb 21 16:33:44 2019
+# Process ID: 4612
+# Current directory: Z:/3C7/LabE/LabE/LabE.runs/synth_1
+# Command line: vivado.exe -log Ripple_Adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Ripple_Adder.tcl
+# Log file: Z:/3C7/LabE/LabE/LabE.runs/synth_1/Ripple_Adder.vds
+# Journal file: Z:/3C7/LabE/LabE/LabE.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Ripple_Adder.tcl -notrace
