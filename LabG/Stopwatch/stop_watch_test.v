@@ -21,6 +21,7 @@ module stop_watch_test
       (.clk(clk), .go(go), .clr(clr),
        .d3(d3), .d2(d2), .d1(d1), .d0(d0) );//d3 added to count for minutes
        
+	   
    //disable the unused display by setting it to 1
    //assign an = an | 4'b1000;
 
