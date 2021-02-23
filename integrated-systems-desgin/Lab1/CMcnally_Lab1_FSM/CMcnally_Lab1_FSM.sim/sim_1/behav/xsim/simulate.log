@@ -1,0 +1,28 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Behavoural Simulation for Finite State Machine
+
+Simulation car entering - Expect 'Enter' to trigger
+Enter: 1'b1 - Exit: 1'b0
+
+Simulation car exiting - Expect 'Exit' to trigger
+Enter: 1'b0 - Exit: 1'b1
+
+Simulation entering halfway but then leaving - Expect no trigger
+Enter: 1'b0 - Exit: 1'b0
+
+Simulation exiting halfway but then staying - Expect no trigger
+Enter: 1'b0 - Exit: 1'b0
+
+Simulation for a pedestrian/cyclist entering - Expect no trigger
+Enter: 1'b0 - Exit: 1'b0
+
+Simulation for a pedestrian/cyclist exiting - Expect no trigger
+Enter: 1'b0 - Exit: 1'b0
+
+Simulation car entering halfway but then disappearing - Expect no trigger
+Enter: 1'b0 - Exit: 1'b0
+
+Simulation car exiting halfway but then disappearing - Expect no trigger
+Enter: 1'b0 - Exit: 1'b0
+

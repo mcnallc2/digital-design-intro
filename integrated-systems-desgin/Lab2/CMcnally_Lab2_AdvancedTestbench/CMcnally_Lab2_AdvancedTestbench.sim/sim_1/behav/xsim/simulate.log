@@ -1,0 +1,161 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+<<<< ~~~~~~~~~~~~~~~~~~~~~~~~~~~ >>>>
+<<<< Behavoural Simulation Begin >>>>
+<<<< ~~~~~~~~~~~~~~~~~~~~~~~~~~~ >>>>
+>>>> System Reset
+>>>> GATE SENSORS: a = 0; b = 0
+
+<<<< Testing Counter >>>>
+
+>>>> >>>> Attempting to exit when 'count' is 0x0 - Expect no change
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> Trigger Counter Check
+
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> Result: PASS
+
+>>>> >>>> Incrementing until 'count' is 0xF
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> Trigger Counter Check
+
+>>>> Expected Count: 0xf; Count: 0xf
+>>>> >>>> Result: PASS
+
+>>>> >>>> Attempting to increment when 'count' is 0xF - Expect no change
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> Trigger Counter Check
+
+>>>> Expected Count: 0xf; Count: 0xf
+>>>> >>>> Result: PASS
+
+>>>> >>>> Decrementing until 'count' is 0x0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> GATE SENSORS: a = 0; b = 1
+>>>> GATE SENSORS: a = 1; b = 1
+>>>> GATE SENSORS: a = 1; b = 0
+>>>> GATE SENSORS: a = 0; b = 0
+>>>> Trigger Counter Check
+
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> Result: PASS

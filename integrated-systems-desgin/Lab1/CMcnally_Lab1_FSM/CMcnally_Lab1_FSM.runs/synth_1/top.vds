@@ -1,0 +1,366 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Feb 13 00:24:29 2021
+# Process ID: 15331
+# Current directory: /home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.runs/synth_1
+# Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: /home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.runs/synth_1/top.vds
+# Journal file: /home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15369 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1384.152 ; gain = 0.000 ; free physical = 602 ; free virtual = 4955
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/new/top.v:25]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/imports/Lab1/debouncer.sv:23]
+	Parameter threshold bound to: 100000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (1#1) [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/imports/Lab1/debouncer.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'fsm' [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/new/fsm.v:24]
+	Parameter clear bound to: 7'b0000001 
+	Parameter a_blocked_enter bound to: 7'b0000010 
+	Parameter a_blocked_exit bound to: 7'b0000100 
+	Parameter b_blocked_enter bound to: 7'b0001000 
+	Parameter b_blocked_exit bound to: 7'b0010000 
+	Parameter both_blocked_enter bound to: 7'b0100000 
+	Parameter both_blocked_exit bound to: 7'b1000000 
+INFO: [Synth 8-6155] done synthesizing module 'fsm' (2#1) [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/new/fsm.v:24]
+INFO: [Synth 8-6157] synthesizing module 'counter' [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/new/counter.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (3#1) [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/new/counter.v:24]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_ctrl' [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/imports/Lab1/seven_seg_ctrl.sv:24]
+INFO: [Synth 8-226] default block is never used [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/imports/Lab1/seven_seg_ctrl.sv:49]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_ctrl' (4#1) [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/imports/Lab1/seven_seg_ctrl.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'top' (5#1) [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/new/top.v:25]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.551 ; gain = 16.398 ; free physical = 614 ; free virtual = 4967
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.551 ; gain = 16.398 ; free physical = 614 ; free virtual = 4967
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.551 ; gain = 16.398 ; free physical = 614 ; free virtual = 4967
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/constrs_1/imports/Lab1/Basys3_Master.xdc]
+Finished Parsing XDC File [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/constrs_1/imports/Lab1/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/constrs_1/imports/Lab1/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.973 ; gain = 0.000 ; free physical = 374 ; free virtual = 4716
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.973 ; gain = 0.000 ; free physical = 375 ; free virtual = 4717
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.973 ; gain = 0.000 ; free physical = 375 ; free virtual = 4717
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.973 ; gain = 0.000 ; free physical = 375 ; free virtual = 4717
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 450 ; free virtual = 4792
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 450 ; free virtual = 4792
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 452 ; free virtual = 4794
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/imports/Lab1/debouncer.sv:49]
+INFO: [Synth 8-802] inferred FSM for state register 'state_ff_reg' in module 'fsm'
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/new/counter.v:53]
+INFO: [Synth 8-5546] ROM "led_out" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                   clear |                          0000001 |                          0000001
+         a_blocked_enter |                          0000010 |                          0000010
+      both_blocked_enter |                          0100000 |                          0100000
+         b_blocked_enter |                          0001000 |                          0001000
+          b_blocked_exit |                          0010000 |                          0010000
+       both_blocked_exit |                          1000000 |                          1000000
+          a_blocked_exit |                          0000100 |                          0000100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'state_ff_reg' in module 'fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 442 ; free virtual = 4785
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 5     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module debouncer 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module fsm 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   8 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 5     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   8 Input      1 Bit        Muxes := 2     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module seven_seg_ctrl 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 432 ; free virtual = 4776
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 308 ; free virtual = 4652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 304 ; free virtual = 4648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 304 ; free virtual = 4648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 304 ; free virtual = 4648
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 304 ; free virtual = 4648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 304 ; free virtual = 4648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 304 ; free virtual = 4648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 304 ; free virtual = 4648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 304 ; free virtual = 4648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    17|
+|3     |LUT1   |    42|
+|4     |LUT2   |    46|
+|5     |LUT3   |     3|
+|6     |LUT4   |     9|
+|7     |LUT5   |    14|
+|8     |LUT6   |    28|
+|9     |FDCE   |    36|
+|10    |FDPE   |     1|
+|11    |FDRE   |    44|
+|12    |IBUF   |     4|
+|13    |OBUF   |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+---------------+------+
+|      |Instance           |Module         |Cells |
++------+-------------------+---------------+------+
+|1     |top                |               |   256|
+|2     |  counter_i        |counter        |    16|
+|3     |  debouncer_btn_a  |debouncer      |    85|
+|4     |  debouncer_btn_b  |debouncer_0    |    85|
+|5     |  fsm_i            |fsm            |    24|
+|6     |  seven_seg_ctrl_i |seven_seg_ctrl |    30|
++------+-------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.973 ; gain = 338.820 ; free physical = 304 ; free virtual = 4648
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1722.973 ; gain = 16.398 ; free physical = 358 ; free virtual = 4702
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1722.980 ; gain = 338.820 ; free physical = 358 ; free virtual = 4702
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.980 ; gain = 0.000 ; free physical = 301 ; free virtual = 4645
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1722.980 ; gain = 338.930 ; free physical = 357 ; free virtual = 4701
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1722.980 ; gain = 0.000 ; free physical = 357 ; free virtual = 4701
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 13 00:24:50 2021...

@@ -1,0 +1,9 @@
+0.6
+2018.3
+Dec  6 2018
+23:39:36
+/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sim_1/new/counter_testbench.v,1613155507,verilog,,,,counter_testbench,,,,,,,,
+/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sim_1/new/fsm_testbench.v,1613152818,verilog,,,,fsm_testbench,,,,,,,,
+/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/new/counter.v,1613155125,verilog,,/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sim_1/new/counter_testbench.v,,counter,,,,,,,,
+/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sources_1/new/fsm.v,1613153833,verilog,,/home/cmcnally/Documents/Year5/Semester 2/5M9/Labs/Lab1/CMcnally_Lab1_FSM/CMcnally_Lab1_FSM.srcs/sim_1/new/counter_testbench.v,,fsm,,,,,,,,
