@@ -15,22 +15,26 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
+// Additional Comments: This is the toplevel testbench wrapper used to connect
+//  the design under test with the stimulus generator and the scoreboard
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
 
 module testbench_wrapper;
 
-    wire clk;
-    wire reset;
-    wire a, b;
-    wire check, terminate;
-    wire [3:0] count, expected_count;
-    wire [4:0] i, j;
+    // wires used to connect the modules
+    wire clk;                           // test_clk
+    wire reset;                         // test_reset
+    wire a, b;                          // gate sensor stimuli
+    wire check, terminate;              // scorecoard control signals
+    wire [3:0] count, expected_count;   // counter values
+    wire [31:0] log_file;               // log file pointer
+    // debug
     wire [6:0] state;
-    wire [31:0] log_file;
+    wire [4:0] i, j;
     
+    // instantiating the stimulus generator
     stim_gen stim_gen_i(
         .log_file(log_file),
         .test_clk(clk),
@@ -40,10 +44,12 @@ module testbench_wrapper;
         .expected_count(expected_count),
         .check(check),
         .terminate(terminate),
+        // debug
         .i(i),
         .j(j)
     );
-    
+
+    // instantiating the scoreboard   
     scoreboard scoreboard_i(
         .clk(clk),
         .reset(reset),
@@ -56,6 +62,7 @@ module testbench_wrapper;
         .log_file(log_file)
     );
     
+    // instantiating the Desgin Under Test
     top dut(
         .clk(clk),
         .reset(reset),

@@ -15,14 +15,16 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
+// Additional Comments: This module is responsible for generating the testbench
+//  clk  and  reset,  and  executing  the  testprocedure by generating the
+//  relative gate sensor stimuli at specific time intervals.
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
 module stim_gen
    #(parameter T=2, delay=4)
    (input  [31:0]    log_file,
-    output reg       test_clk,
+    output reg       test_clk,      
     output reg       test_reset,
     output reg       test_a,
     output reg       test_b,
@@ -47,65 +49,59 @@ module stim_gen
     
     // test procedure
     initial begin
-        initialise();
-        system_reset();
+        initialise();   // inialise test signals
+        system_reset(); // reset system
         
         $fdisplay(log_file, "\n\n>>>> >>>> COUNTER TESTS >>>>\n"); 
          
         // test to fully increment counter unitl it hits 0xF
         $fdisplay(log_file, ">>>> >>>> Incrementing until 'count' is 0xF\n");
         while (expected_count < 4'hF) begin
-            // enter case
-            run_5_step_gate_sequence(5'b00110, 5'b01100); // expect 0xF
+            run_5_step_gate_sequence(5'b00110, 5'b01100); // run enter sensor seq
         end
-        check_counters();
+        check_counters();   // expect 0xF
         
         // test to attempt to increment when counter is 0xF
         $fdisplay(log_file, ">>>> >>>> Attempting to increment when 'count' is 0xF - Expect no change\n");
-        // enter case   
-        run_5_step_gate_sequence(5'b00110, 5'b01100); // expect 0xF
-        check_counters();
+        run_5_step_gate_sequence(5'b00110, 5'b01100); // run enter sensor seq
+        check_counters();   // expect 0xF   
         
         // test to decrement counter unitl it hits 0x0
         $fdisplay(log_file, ">>>> >>>> Decrementing until 'count' is 0x0\n");
         while (expected_count > 4'h0) begin
-            // exit case
-            run_5_step_gate_sequence(5'b01100, 5'b00110); // expect 0x0
+            run_5_step_gate_sequence(5'b01100, 5'b00110); // run exit sensor seq
         end
-        check_counters();
+        check_counters();   // expect 0x0
         
         // test to attempt to decrment when it is 0x0
         $fdisplay(log_file, ">>>> >>>> Attempting to decrement when 'count' is 0x0 - Expect no change\n");
-        // exit case
-        run_5_step_gate_sequence(5'b01100, 5'b00110);  // expect 0x0
-        check_counters();
+        run_5_step_gate_sequence(5'b01100, 5'b00110);  // run exit sensor seq
+        check_counters();   // expect 0x0
         
         system_reset(); // reset system        
-        
         
         
         $fdisplay(log_file, "\n\n>>>> >>>> FSM TESTS >>>>\n");
         $fdisplay(log_file, "\n>>>> >>>> Required Behaviour\n");  
         
-        // test to attempt to increment
-        $fdisplay(log_file, ">>>> >>>> Attempting to increment using 3 supported sequences\n");
-        // enter case   
-        run_5_step_gate_sequence(5'b00110, 5'b01110);       // expect increment
-        check_counters();
-        run_7_step_gate_sequence(7'b0011110, 7'b0110100);   // expect increment 
-        check_counters();
-        run_7_step_gate_sequence(7'b0010110, 7'b0111100);   // expect increment 
-        check_counters();
+        // test to attempt to increment using all 3 enter sensor sequences
+        $fdisplay(log_file, ">>>> >>>> Attempting to increment using 3 supported sequences\n");   
+        run_5_step_gate_sequence(5'b00110, 5'b01110);       // run enter sensor seq
+        check_counters();                                   // expect 0x1
+        run_7_step_gate_sequence(7'b0011110, 7'b0110100);   // run enter sensor seq 
+        check_counters();                                   // expect 0x2
+        run_7_step_gate_sequence(7'b0010110, 7'b0111100);   // run enter sensor seq 
+        check_counters();                                   // expect 0x3
         
         // test to attempt to decrement
         $fdisplay(log_file, ">>>> >>>> Attempting to increment using 3 supported sequences\n");
         // enter case   
-        run_5_step_gate_sequence(5'b01100, 5'b00110);       // expect decrement
-        check_counters();
-        run_7_step_gate_sequence(7'b0110100, 7'b0011110);   // expect decrement 
-        check_counters();
-        run_7_step_gate_sequence(7'b0111100, 7'b0010110);   // expect decrement 
-        check_counters();
+        run_5_step_gate_sequence(5'b01100, 5'b00110);       // run exit sensor seq
+        check_counters();                                   // expect 0x2
+        run_7_step_gate_sequence(7'b0110100, 7'b0011110);   // run exit sensor seq 
+        check_counters();                                   // expect 0x1
+        run_7_step_gate_sequence(7'b0111100, 7'b0010110);   // run exit sensor seq
+        check_counters();                                   // expect 0x0
         
         system_reset(); // reset system        
         
@@ -139,17 +135,17 @@ module stim_gen
     //======================================
     // task definitions
     //======================================
-    // task run a 5 step sequence of gate sensor configurations
+    
+    // task to run a 5 step sequence of gate sensor configurations
     // (a[0],b[0])->(a[1],b[1])->(a[2],b[2])->(a[3],b[3])->(a[4],b[4])
     task run_5_step_gate_sequence(
         input [4:0] a, 
         input [4:0] b
         );
         begin
-            // sim for a car entering
             $fdisplay(log_file, "Case: (%d%d)->(%d%d)->(%d%d)->(%d%d)->(%d%d)",a[0],b[0],a[1],b[1],a[2],b[2],a[3],b[3],a[4],a[4]);
             
-            // assign stimulus outputs in intervals
+            // assign stimulus outputs in time intervals
             test_a = a[0];
             test_b = b[0];
             #delay;
@@ -165,7 +161,7 @@ module stim_gen
             test_a = a[4];
             test_b = b[4];
             
-            // wait half clock cycle to modify expected count
+            // we wait a clock cycle until we modify the expected count
             // this keeps the stimulus in sync with the DUT
             #(delay/2);
             
@@ -176,21 +172,23 @@ module stim_gen
                 if (expected_count < 4'hF) begin
                     expected_count = expected_count + 1;
                 end
+                // else expected count maintains its value
                 else begin
                     expected_count = expected_count;    
                 end
             end
             // if input gate sequence is correct for exit
             else if (a==5'b01100 && b==5'b00110) begin
-                // if count is greater than 0x0 we deccrement exp count
+                // if count is greater than 0x0 we decrement exp count
                 if (expected_count > 4'h0) begin  
                     expected_count = expected_count - 1;
-                end  
+                end
+                // else expected count maintains its value
                 else begin
                     expected_count = expected_count;
                 end
             end
-            // else exp counter does not change
+            // else expected count maintains its value
             else begin
                 expected_count = expected_count;
             end
@@ -200,14 +198,13 @@ module stim_gen
     endtask
 
 
-    // task run a 7 step sequence of gate sensor configurations
+    // task to run a 7-step sequence of gate sensor configurations
     // (a[0],b[0])->(a[1],b[1])->(a[2],b[2])->(a[3],b[3])->(a[4],b[4])->(a[5],b[5])->(a[6],b[6])
     task run_7_step_gate_sequence(
         input [6:0] a, 
         input [6:0] b
         );
         begin
-            // sim for a car entering
             $fdisplay(log_file, "Case: (%d%d)->(%d%d)->(%d%d)->(%d%d)->(%d%d)->(%d%d)->(%d%d)",a[0],b[0],a[1],b[1],a[2],b[2],a[3],b[3],a[4],a[4],a[5],a[5],a[6],a[6]);
             
             // assign stimulus outputs in intervals
@@ -243,6 +240,7 @@ module stim_gen
                 if (expected_count < 4'hF) begin
                     expected_count = expected_count + 1;
                 end
+                // else expected count maintains its value
                 else begin
                     expected_count = expected_count;    
                 end
@@ -252,12 +250,13 @@ module stim_gen
                 // if count is greater than 0x0 we deccrement exp count
                 if (expected_count > 4'h0) begin  
                     expected_count = expected_count - 1;
-                end  
+                end
+                // else expected count maintains its value
                 else begin
                     expected_count = expected_count;
                 end
             end
-            // else exp counter does not change
+            // else expected count maintains its value
             else begin
                 expected_count = expected_count;
             end
@@ -267,7 +266,7 @@ module stim_gen
     endtask
     
     
-    // task to init the test procedure
+    // task to initilise the test procedure
     task initialise();
     begin   
         $fdisplay(log_file, ">>>> ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ >>>>");
@@ -289,18 +288,18 @@ module stim_gen
     // task to trigger system reset
     task system_reset();
     begin   
-        $display(">>>> System Reset");  
+        $display(">>>> System Reset"); // DO NOT LOG 
         test_reset = 1;     // enable reset for DUT
-        test_a = 0;         // 
+        test_a = 0;         // disable sensor stimuli
         test_b = 0;
-        expected_count = 0;
+        expected_count = 0; // reset expected count
         #delay;
         test_reset = 0;
     end
     endtask
     
     
-     // task to trigger scoreboard check
+     // task to trigger scoreboard to check counter values
     task check_counters();
     begin   
         $display(">>>> Triggering Counter Check");  
@@ -312,7 +311,7 @@ module stim_gen
     endtask
     
     
-    // task to trigger test termination
+    // task to trigger test termination in scoreboard
     task terminate_test();
     begin   
         $display(">>>> Triggering Test Termination");  

@@ -15,7 +15,10 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
+// Additional Comments: This module is used to monitor the check and terminate
+//  signals from the stimulus generator totrigger test evaluations and
+//  termination handlers. The scoreboard module is responsible for opening
+//  a log file to store the test results. 
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -35,8 +38,8 @@ module scoreboard(
     // variables to track number tests run and tests passed
     integer tests, passed;
     
-    
-    // Monitoring the check signal - compare stimulus with DUT on posedge
+    // Monitoring the check signal
+    // This is where we compare stimulus with DUT and log results
     always @(posedge check) begin
         $fdisplay(log_file, ">>>> Test No. %d", (tests+1));
         $fdisplay(log_file, ">>>> Expected Count: 0x%x; Count: 0x%x", expected_count, count);
@@ -54,7 +57,7 @@ module scoreboard(
     end
     
     
-    // Monitor gate sensor stimulus and log changes
+    // Monitor the gate sensor stimuli and log changes
     always @(a, b) begin
         $fdisplay(log_file, "Gate Sensors: a = %d; b = %d", a, b);
     end
@@ -65,20 +68,21 @@ module scoreboard(
         log_file = $fopen("fsm_advanced_testing.txt", "w");  //create testing logfile
         tests  = 0;                                          // init tests var
         passed = 0;                                          // init passed var
-        termination_handler();                               // test termination handler
+        termination_handler();                               // run test termination handler
     end
     
     
     //======================================
     // task definitions
     //======================================
+    
     // task to handle a test termination from the stimulus
     task termination_handler();
     begin
         // waiting for posedge on termination signal
         @(posedge terminate);
         
-        // log full tests test results
+        // log summary of full tests results
         $fdisplay(log_file, ">>>> Test Terminated: %d of %d tests passed\n", passed, tests);
         
         // log final test result
