@@ -1,0 +1,137 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Feb 23 16:35:46 2021
+# Process ID: 23299
+# Current directory: /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/vivado.log
+# Journal file: /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/CMcnally_Lab2_AdvancedTestbench/CMcnally_Lab2_AdvancedTestbench.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+set_property -name {xsim.simulate.runtime} -value {80000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+source testbench_wrapper.tcl
+save_wave_config {/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/CMcnally_Lab2_AdvancedTestbench/testbench_wrapper_behav_with_bugs.wcfg}
+add_files -fileset sim_1 -norecurse /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/CMcnally_Lab2_AdvancedTestbench/testbench_wrapper_behav_with_bugs.wcfg
+set_property xsim.view /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/CMcnally_Lab2_AdvancedTestbench/testbench_wrapper_behav_with_bugs.wcfg [get_filesets sim_1]
+close_sim

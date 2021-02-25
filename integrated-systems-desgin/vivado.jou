@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Feb 25 16:37:50 2021
+# Process ID: 3177
+# Current directory: /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/vivado.log
+# Journal file: /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/CMcnally_Lab2_AdvancedTestbench/CMcnally_Lab2_AdvancedTestbench.xpr
+update_compile_order -fileset sources_1

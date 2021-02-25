@@ -1,0 +1,78 @@
+Gate Sensors: a = 0; b = 0
+
+
+>>>> >>>> FSM TESTS >>>>
+
+
+>>>> >>>> Required Behaviour
+
+>>>> >>>> Attempting to increment using 3 supported sequences
+
+Case: (00)->(11)->(11)->(01)->(00)
+Gate Sensors: a = 1; b = 1
+Gate Sensors: a = 0; b = 1
+Gate Sensors: a = 0; b = 0
+>>>> Test No.           1
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+
+Case: (00)->(10)->(11)->(10)->(11)->(00)->(00)
+Gate Sensors: a = 1; b = 0
+Gate Sensors: a = 1; b = 1
+Gate Sensors: a = 1; b = 0
+Gate Sensors: a = 1; b = 1
+Gate Sensors: a = 0; b = 1
+Gate Sensors: a = 0; b = 0
+>>>> Test No.           2
+>>>> Expected Count: 0x1; Count: 0x1
+>>>> >>>> RESULT: PASS
+
+Case: (00)->(10)->(11)->(01)->(11)->(00)->(00)
+Gate Sensors: a = 1; b = 0
+Gate Sensors: a = 1; b = 1
+Gate Sensors: a = 0; b = 1
+Gate Sensors: a = 1; b = 1
+Gate Sensors: a = 0; b = 1
+Gate Sensors: a = 0; b = 0
+>>>> Test No.           3
+>>>> Expected Count: 0x2; Count: 0x2
+>>>> >>>> RESULT: PASS
+
+>>>> >>>> Attempting to increment using 3 supported sequences
+
+Case: (00)->(01)->(11)->(10)->(00)
+Gate Sensors: a = 0; b = 1
+Gate Sensors: a = 1; b = 1
+Gate Sensors: a = 1; b = 0
+Gate Sensors: a = 0; b = 0
+>>>> Test No.           4
+>>>> Expected Count: 0x1; Count: 0x1
+>>>> >>>> RESULT: PASS
+
+Case: (00)->(01)->(11)->(01)->(11)->(11)->(00)
+Gate Sensors: a = 0; b = 1
+Gate Sensors: a = 1; b = 1
+Gate Sensors: a = 0; b = 1
+Gate Sensors: a = 1; b = 1
+Gate Sensors: a = 1; b = 0
+Gate Sensors: a = 0; b = 0
+>>>> Test No.           5
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+
+Case: (00)->(01)->(11)->(10)->(11)->(11)->(00)
+Gate Sensors: a = 0; b = 1
+Gate Sensors: a = 1; b = 1
+Gate Sensors: a = 1; b = 0
+Gate Sensors: a = 1; b = 1
+Gate Sensors: a = 1; b = 0
+Gate Sensors: a = 0; b = 0
+>>>> Test No.           6
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+
+>>>> Test Terminated:           6 of           6 tests passed
+
+>>>> >>>> RESULT: ALL TESTS PASSED
+
+
