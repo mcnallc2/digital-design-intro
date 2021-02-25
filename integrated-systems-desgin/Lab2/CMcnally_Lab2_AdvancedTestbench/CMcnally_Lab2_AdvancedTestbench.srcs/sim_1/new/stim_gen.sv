@@ -296,7 +296,6 @@ module stim_gen
         expected_count = 0;
         #delay;
         test_reset = 0;
-        #delay;
     end
     endtask
     
