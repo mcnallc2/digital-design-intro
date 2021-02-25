@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../AdvancedTestbench.srcs/sources_1/imports/new/counter.v" \
+"../../../../AdvancedTestbench.srcs/sources_1/imports/new/fsm.v" \
+"../../../../AdvancedTestbench.srcs/sources_1/imports/new/top.v" \
+
+sv xil_defaultlib  \
+"../../../../AdvancedTestbench.srcs/sim_1/imports/new/scoreboard.sv" \
+"../../../../AdvancedTestbench.srcs/sim_1/imports/new/stim_gen.sv" \
+"../../../../AdvancedTestbench.srcs/sim_1/imports/new/testbench_wrapper.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

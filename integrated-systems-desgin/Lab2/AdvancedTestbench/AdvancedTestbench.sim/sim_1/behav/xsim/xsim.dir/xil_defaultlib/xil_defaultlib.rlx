@@ -1,0 +1,11 @@
+0.6
+2018.3
+Dec  6 2018
+23:39:36
+/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/AdvancedTestbench/AdvancedTestbench.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/AdvancedTestbench/AdvancedTestbench.srcs/sim_1/imports/new/scoreboard.sv,1614271302,systemVerilog,,/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/AdvancedTestbench/AdvancedTestbench.srcs/sim_1/imports/new/stim_gen.sv,,scoreboard,,,,,,,,
+/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/AdvancedTestbench/AdvancedTestbench.srcs/sim_1/imports/new/stim_gen.sv,1614274356,systemVerilog,,/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/AdvancedTestbench/AdvancedTestbench.srcs/sim_1/imports/new/testbench_wrapper.sv,,stim_gen,,,,,,,,
+/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/AdvancedTestbench/AdvancedTestbench.srcs/sim_1/imports/new/testbench_wrapper.sv,1614276653,systemVerilog,,,,testbench_wrapper,,,,,,,,
+/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/AdvancedTestbench/AdvancedTestbench.srcs/sources_1/imports/new/counter.v,1613175838,verilog,,/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/AdvancedTestbench/AdvancedTestbench.srcs/sources_1/imports/new/fsm.v,,counter,,,,,,,,
+/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/AdvancedTestbench/AdvancedTestbench.srcs/sources_1/imports/new/fsm.v,1614276653,verilog,,/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/AdvancedTestbench/AdvancedTestbench.srcs/sources_1/imports/new/top.v,,fsm,,,,,,,,
+/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/AdvancedTestbench/AdvancedTestbench.srcs/sources_1/imports/new/top.v,1613778917,verilog,,,,top,,,,,,,,
