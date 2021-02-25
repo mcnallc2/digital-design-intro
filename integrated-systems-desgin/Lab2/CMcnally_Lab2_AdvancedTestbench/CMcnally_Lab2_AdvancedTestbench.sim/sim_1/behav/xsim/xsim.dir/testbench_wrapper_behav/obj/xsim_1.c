@@ -60,6 +60,7 @@ extern void execute_13(char*, char *);
 extern void execute_14(char*, char *);
 extern void execute_18(char*, char *);
 extern void execute_19(char*, char *);
+extern void vlog_simple_process_execute_0_fast_no_reg(char*, char*, char*);
 extern void vlog_simple_process_execute_0_fast_no_reg_no_agg(char*, char*, char*);
 extern void execute_21(char*, char *);
 extern void execute_22(char*, char *);
@@ -73,12 +74,14 @@ extern void execute_44(char*, char *);
 extern void execute_45(char*, char *);
 extern void transaction_5(char*, char*, unsigned, unsigned, unsigned);
 extern void vlog_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[30] = {(funcp)execute_31, (funcp)execute_32, (funcp)execute_33, (funcp)execute_34, (funcp)execute_35, (funcp)execute_36, (funcp)execute_37, (funcp)execute_38, (funcp)execute_39, (funcp)execute_40, (funcp)execute_3, (funcp)execute_4, (funcp)execute_12, (funcp)execute_13, (funcp)execute_14, (funcp)execute_18, (funcp)execute_19, (funcp)vlog_simple_process_execute_0_fast_no_reg_no_agg, (funcp)execute_21, (funcp)execute_22, (funcp)execute_24, (funcp)execute_25, (funcp)execute_26, (funcp)execute_41, (funcp)execute_42, (funcp)execute_43, (funcp)execute_44, (funcp)execute_45, (funcp)transaction_5, (funcp)vlog_transfunc_eventcallback};
-const int NumRelocateId= 30;
+extern void transaction_10(char*, char*, unsigned, unsigned, unsigned);
+extern void transaction_30(char*, char*, unsigned, unsigned, unsigned);
+funcp funcTab[33] = {(funcp)execute_31, (funcp)execute_32, (funcp)execute_33, (funcp)execute_34, (funcp)execute_35, (funcp)execute_36, (funcp)execute_37, (funcp)execute_38, (funcp)execute_39, (funcp)execute_40, (funcp)execute_3, (funcp)execute_4, (funcp)execute_12, (funcp)execute_13, (funcp)execute_14, (funcp)execute_18, (funcp)execute_19, (funcp)vlog_simple_process_execute_0_fast_no_reg, (funcp)vlog_simple_process_execute_0_fast_no_reg_no_agg, (funcp)execute_21, (funcp)execute_22, (funcp)execute_24, (funcp)execute_25, (funcp)execute_26, (funcp)execute_41, (funcp)execute_42, (funcp)execute_43, (funcp)execute_44, (funcp)execute_45, (funcp)transaction_5, (funcp)vlog_transfunc_eventcallback, (funcp)transaction_10, (funcp)transaction_30};
+const int NumRelocateId= 33;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/testbench_wrapper_behav/xsim.reloc",  (void **)funcTab, 30);
+	iki_relocate(dp, "xsim.dir/testbench_wrapper_behav/xsim.reloc",  (void **)funcTab, 33);
 
 	/*Populate the transaction function pointer field in the whole net structure */
 }

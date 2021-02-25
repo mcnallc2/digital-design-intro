@@ -1123,8 +1123,13 @@ Gate Sensors: a = 1; b = 1
 Gate Sensors: a = 0; b = 1
 Gate Sensors: a = 0; b = 0
 >>>> Test No.         110
+<<<<<<< Updated upstream
 >>>> Expected Count: 0x0; Count: 0x1
 >>>> >>>> RESULT: FAIL
+=======
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+>>>>>>> Stashed changes
 
 Case: (11)->(11)->(01)->(00)->(00)
 Gate Sensors: a = 1; b = 1
@@ -1195,8 +1200,13 @@ Gate Sensors: a = 1; b = 1
 Gate Sensors: a = 0; b = 1
 Gate Sensors: a = 0; b = 0
 >>>> Test No.         118
+<<<<<<< Updated upstream
 >>>> Expected Count: 0x0; Count: 0x1
 >>>> >>>> RESULT: FAIL
+=======
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+>>>>>>> Stashed changes
 
 Case: (11)->(11)->(01)->(01)->(00)
 Gate Sensors: a = 1; b = 1
@@ -1272,8 +1282,13 @@ Gate Sensors: a = 0; b = 1
 Gate Sensors: a = 0; b = 0
 Gate Sensors: a = 0; b = 1
 >>>> Test No.         126
+<<<<<<< Updated upstream
 >>>> Expected Count: 0x0; Count: 0x1
 >>>> >>>> RESULT: FAIL
+=======
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+>>>>>>> Stashed changes
 
 Gate Sensors: a = 0; b = 0
 Case: (11)->(11)->(01)->(00)->(00)
@@ -2055,8 +2070,13 @@ Gate Sensors: a = 1; b = 1
 Gate Sensors: a = 0; b = 1
 Gate Sensors: a = 0; b = 0
 >>>> Test No.         210
+<<<<<<< Updated upstream
 >>>> Expected Count: 0x0; Count: 0x1
 >>>> >>>> RESULT: FAIL
+=======
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+>>>>>>> Stashed changes
 
 Case: (00)->(11)->(11)->(01)->(00)
 Gate Sensors: a = 1; b = 1
@@ -2324,8 +2344,13 @@ Gate Sensors: a = 1; b = 1
 Gate Sensors: a = 0; b = 1
 Gate Sensors: a = 0; b = 0
 >>>> Test No.         240
+<<<<<<< Updated upstream
 >>>> Expected Count: 0x0; Count: 0x1
 >>>> >>>> RESULT: FAIL
+=======
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+>>>>>>> Stashed changes
 
 Case: (11)->(10)->(11)->(01)->(00)
 Gate Sensors: a = 1; b = 1
@@ -2334,8 +2359,13 @@ Gate Sensors: a = 1; b = 1
 Gate Sensors: a = 0; b = 1
 Gate Sensors: a = 0; b = 0
 >>>> Test No.         241
+<<<<<<< Updated upstream
 >>>> Expected Count: 0x0; Count: 0x1
 >>>> >>>> RESULT: FAIL
+=======
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+>>>>>>> Stashed changes
 
 Case: (10)->(11)->(11)->(01)->(00)
 Gate Sensors: a = 1; b = 0
@@ -2343,8 +2373,13 @@ Gate Sensors: a = 1; b = 1
 Gate Sensors: a = 0; b = 1
 Gate Sensors: a = 0; b = 0
 >>>> Test No.         242
+<<<<<<< Updated upstream
 >>>> Expected Count: 0x0; Count: 0x1
 >>>> >>>> RESULT: FAIL
+=======
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+>>>>>>> Stashed changes
 
 Case: (11)->(11)->(11)->(01)->(00)
 Gate Sensors: a = 1; b = 1
@@ -5821,8 +5856,13 @@ Gate Sensors: a = 0; b = 1
 Gate Sensors: a = 0; b = 0
 Gate Sensors: a = 1; b = 0
 >>>> Test No.         606
+<<<<<<< Updated upstream
 >>>> Expected Count: 0x0; Count: 0x1
 >>>> >>>> RESULT: FAIL
+=======
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+>>>>>>> Stashed changes
 
 Gate Sensors: a = 0; b = 0
 Case: (11)->(11)->(01)->(00)->(11)
@@ -5981,8 +6021,13 @@ Gate Sensors: a = 0; b = 1
 Gate Sensors: a = 0; b = 0
 Gate Sensors: a = 1; b = 1
 >>>> Test No.         622
+<<<<<<< Updated upstream
 >>>> Expected Count: 0x0; Count: 0x1
 >>>> >>>> RESULT: FAIL
+=======
+>>>> Expected Count: 0x0; Count: 0x0
+>>>> >>>> RESULT: PASS
+>>>>>>> Stashed changes
 
 Gate Sensors: a = 0; b = 0
 Case: (11)->(11)->(01)->(00)->(11)
@@ -9421,7 +9466,11 @@ Gate Sensors: a = 1; b = 1
 >>>> >>>> RESULT: PASS
 
 Gate Sensors: a = 0; b = 0
+<<<<<<< Updated upstream
 >>>> Test Terminated:         962 of         971 tests passed
+=======
+>>>> Test Terminated:         971 of         971 tests passed
+>>>>>>> Stashed changes
 
 >>>> >>>> RESULT: TESTS HAVE FAILED
 

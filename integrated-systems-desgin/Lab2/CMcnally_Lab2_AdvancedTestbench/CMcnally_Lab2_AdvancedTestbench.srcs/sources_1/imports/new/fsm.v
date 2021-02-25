@@ -28,35 +28,35 @@ module fsm(
     input   b,
     output  enter,
     output  exit,
-    output [6:0] state
+    output [7:0] state
     );
     
-    assign state = state_ff;
-    
     // registers
-    reg [6:0] state_ff, state_nxt;
+    reg [7:0] state_ff, state_nxt;
     reg       enter_ff, enter_nxt;
     reg       exit_ff, exit_nxt;
-
+    
     // connect output regs to output wires
+    assign state = state_ff;
     assign enter = enter_ff;
     assign exit = exit_ff;
     
     // one-hot encoded state parameters
-    parameter   clear               = 7'b0000001,
-                a_blocked_enter     = 7'b0000010,
-                a_blocked_exit      = 7'b0000100,
-                b_blocked_enter     = 7'b0001000,
-                b_blocked_exit      = 7'b0010000,
-                both_blocked_enter  = 7'b0100000,
-                both_blocked_exit   = 7'b1000000;
+    parameter   reset_state         = 8'b00000001,
+                clear               = 8'b00000010,
+                a_blocked_enter     = 8'b00000100,
+                a_blocked_exit      = 8'b00001000,
+                b_blocked_enter     = 8'b00010000,
+                b_blocked_exit      = 8'b00100000,
+                both_blocked_enter  = 8'b01000000,
+                both_blocked_exit   = 8'b10000000;
                 
     
     // Sequential Logic - Asynchronous Reset
     always @(posedge clk, posedge reset) begin
         // if reset - state is clear with enter/exit low
         if(reset == 1'b1) begin 
-            state_ff <= clear;
+            state_ff <= reset_state;
             enter_ff <= 1'b0;
             exit_ff  <= 1'b0;
         end
@@ -72,6 +72,22 @@ module fsm(
     // Combinational Logic
     always @(*) begin
         case(state_ff)
+            // Both sensors are unblocked - Clear state
+            reset_state: begin
+                // enter/exit default low
+                enter_nxt = 1'b0;
+                exit_nxt  = 1'b0;
+                
+                // if A high and B low - Move to entering A blocked state
+                if (~a & ~b) begin
+                    state_nxt = clear;
+                end
+                // else remain in current state
+                else begin
+                    state_nxt = state_ff;
+                end
+            end
+            
             // Both sensors are unblocked - Clear state
             clear: begin
                 // enter/exit default low
@@ -108,7 +124,7 @@ module fsm(
                 end
                 // if A low and B high - Move to clear state
                 else if (~a & b) begin
-                    state_nxt = clear;
+                    state_nxt = reset_state;
                 end
                 // else remain in current state
                 else begin
@@ -134,7 +150,7 @@ module fsm(
                 end
                 // if A low and B low - Move to clear state 
                 else if (~a & b) begin
-                    state_nxt = clear;
+                    state_nxt = reset_state;
                 end
                 // else remain in current state
                 else begin
@@ -155,7 +171,7 @@ module fsm(
                 
                 // if A high and B low - Move to clear state
                 else if (a & ~b) begin
-                    state_nxt = clear;
+                    state_nxt = reset_state;
                 end
                 
                 // if A low and B low - Move to clear state
@@ -182,7 +198,7 @@ module fsm(
                 end
                 // if A high and B low - Move to clear state
                 else if (a & ~b) begin
-                    state_nxt = clear;
+                    state_nxt = reset_state;
                 end
                 // if A low and B low - Move to clear state
                 else if (~a & ~b) begin
@@ -245,7 +261,7 @@ module fsm(
             
             // default to clear state with enter/exit low
             default: begin
-                state_nxt = clear;
+                state_nxt = reset_state;
                 enter_nxt = 1'b0;
                 exit_nxt  = 1'b0;
             end

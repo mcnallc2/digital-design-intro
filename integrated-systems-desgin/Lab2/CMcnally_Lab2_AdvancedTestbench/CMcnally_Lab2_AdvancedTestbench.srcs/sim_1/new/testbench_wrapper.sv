@@ -44,7 +44,7 @@ module testbench_wrapper;
         .j(j)
     );
     
-    scoreboard scorecoard_i(
+    scoreboard scoreboard_i(
         .clk(clk),
         .reset(reset),
         .a(a),

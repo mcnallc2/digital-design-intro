@@ -12,3 +12,18 @@
 start_gui
 open_project /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/CMcnally_Lab2_AdvancedTestbench/CMcnally_Lab2_AdvancedTestbench.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/CMcnally_Lab2_AdvancedTestbench/testbench_wrapper_behav_with_bugs.wcfg
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+open_wave_config /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/CMcnally_Lab2_AdvancedTestbench/testbench_wrapper_behav_with_bugs.wcfg
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+open_wave_config /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/CMcnally_Lab2_AdvancedTestbench/testbench_wrapper_behav_with_bugs.wcfg
+source testbench_wrapper.tcl
+close_sim
+launch_simulation
+open_wave_config /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab2/CMcnally_Lab2_AdvancedTestbench/testbench_wrapper_behav_with_bugs.wcfg
+source testbench_wrapper.tcl
