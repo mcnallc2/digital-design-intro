@@ -1,0 +1,79 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Sat Mar 13 14:58:45 2021
+| Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
+| Command      : report_control_sets -verbose -file fir_filter_test_control_sets_placed.rpt
+| Design       : fir_filter_test
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    15 |
+| Unused register locations in slices containing registers |    14 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|    16+ |           15 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1281 |          348 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             337 |           53 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              80 |           24 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+------------------+----------------+
+|  Clock Signal  |                                                                  Enable Signal                                                                  |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
++----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+------------------+----------------+
+|  clk_IBUF_BUFG | simple_peak_detector/max_ff_0                                                                                                                   | sine_generator/SR[0] |                3 |             16 |
+|  clk_IBUF_BUFG | sine_generator/E[0]                                                                                                                             | reset_IBUF           |                3 |             16 |
+|  clk_IBUF_BUFG | fir/U0/i_synth/g_single_rate_hb_hilb_ipol.i_single_rate_hb_hilb_ipol/g_s_data_chan_fifo.i_s_data_chan_fifo/wr_enable                            |                      |                2 |             16 |
+|  clk_IBUF_BUFG | sine_generator/test_sig_gen/U0/i_synth/i_synth/gen_cordic.output_stage/gen_rotation.gen_rdy_cr/ce                                               |                      |                5 |             17 |
+|  clk_IBUF_BUFG | fir/U0/i_synth/g_single_rate_hb_hilb_ipol.i_single_rate_hb_hilb_ipol/g_parallel.i_latch_op/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[13] |                      |                6 |             32 |
+|  clk_IBUF_BUFG | fir/U0/i_synth/g_single_rate_hb_hilb_ipol.i_single_rate_hb_hilb_ipol/cntrl[7]_17[6]                                                             |                      |                2 |             32 |
+|  clk_IBUF_BUFG | fir/U0/i_synth/g_single_rate_hb_hilb_ipol.i_single_rate_hb_hilb_ipol/cntrl[6]_18[6]                                                             |                      |                2 |             32 |
+|  clk_IBUF_BUFG | fir/U0/i_synth/g_single_rate_hb_hilb_ipol.i_single_rate_hb_hilb_ipol/cntrl[2]_22[6]                                                             |                      |                2 |             32 |
+|  clk_IBUF_BUFG | fir/U0/i_synth/g_single_rate_hb_hilb_ipol.i_single_rate_hb_hilb_ipol/cntrl[1]_23[6]                                                             |                      |                2 |             32 |
+|  clk_IBUF_BUFG | fir/U0/i_synth/g_single_rate_hb_hilb_ipol.i_single_rate_hb_hilb_ipol/cntrl[3]_21[6]                                                             |                      |                2 |             32 |
+|  clk_IBUF_BUFG | fir/U0/i_synth/g_single_rate_hb_hilb_ipol.i_single_rate_hb_hilb_ipol/cntrl[5]_19[6]                                                             |                      |                2 |             32 |
+|  clk_IBUF_BUFG | fir/U0/i_synth/g_single_rate_hb_hilb_ipol.i_single_rate_hb_hilb_ipol/cntrl[4]_20[6]                                                             |                      |                2 |             32 |
+|  clk_IBUF_BUFG | enable_IBUF                                                                                                                                     | reset_IBUF           |               18 |             48 |
+|  clk_IBUF_BUFG | fir/U0/i_synth/g_single_rate_hb_hilb_ipol.i_single_rate_hb_hilb_ipol/g_parallel.i_cntrl_src/p_49_in                                             |                      |               28 |            336 |
+|  clk_IBUF_BUFG |                                                                                                                                                 |                      |              348 |           1414 |
++----------------+-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+------------------+----------------+
+
+
