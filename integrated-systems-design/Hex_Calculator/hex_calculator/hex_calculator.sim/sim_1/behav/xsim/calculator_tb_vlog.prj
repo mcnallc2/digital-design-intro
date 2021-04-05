@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../hex_calculator.srcs/sources_1/new/all_clear.sv" \
+"../../../../hex_calculator.srcs/sources_1/new/arithmetic.sv" \
+"../../../../hex_calculator.srcs/sources_1/new/calculator_fsm.sv" \
+"../../../../hex_calculator.srcs/sources_1/imports/Hex_Calculator/seven_seg_ctrl.sv" \
+"../../../../hex_calculator.srcs/sources_1/new/top_level_wrapper.sv" \
+"../../../../hex_calculator.srcs/sim_1/new/calculator_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

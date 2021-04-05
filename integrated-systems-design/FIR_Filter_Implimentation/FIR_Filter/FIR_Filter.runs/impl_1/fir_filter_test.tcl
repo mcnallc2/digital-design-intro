@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -70,14 +69,14 @@ set rc [catch {
   set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/FIR_Filter/FIR_Filter.cache/wt [current_project]
-  set_property parent.project_path /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/FIR_Filter/FIR_Filter.xpr [current_project]
-  set_property ip_output_repo /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/FIR_Filter/FIR_Filter.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/wt [current_project]
+  set_property parent.project_path /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.xpr [current_project]
+  set_property ip_output_repo /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/FIR_Filter/FIR_Filter.runs/synth_1/fir_filter_test.dcp
-  read_ip -quiet /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci
-  read_ip -quiet /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/FIR_Filter/FIR_Filter.srcs/sources_1/ip/cordic_0/cordic_0.xci
-  read_xdc /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/FIR_Filter/FIR_Filter.srcs/constrs_1/imports/Lab3/Basys3_Master.xdc
+  add_files -quiet /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.runs/synth_1/fir_filter_test.dcp
+  read_ip -quiet /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/cordic_0/cordic_0.xci
+  read_ip -quiet /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci
+  read_xdc /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/constrs_1/imports/Lab3/Basys3_Master.xdc
   link_design -top fir_filter_test -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

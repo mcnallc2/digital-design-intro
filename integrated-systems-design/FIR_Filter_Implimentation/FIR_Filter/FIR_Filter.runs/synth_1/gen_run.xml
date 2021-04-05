@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1615647451">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1616537757">
   <File Type="VDS-TIMING-PB" Name="fir_filter_test_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="fir_filter_test_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="fir_filter_test.dcp"/>
@@ -11,13 +11,6 @@
   <File Type="PA-TCL" Name="fir_filter_test.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/Lab4/measure_sine_peak.sv">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../measure_sine_peak.sv"/>
@@ -72,8 +65,11 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="fir_compiler_0"/>
   <BlockFileSet Type="BlockSrcs" Name="cordic_0"/>
 </GenRun>

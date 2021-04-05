@@ -1,0 +1,84 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Mon Apr  5 12:24:06 2021
+| Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
+| Command      : report_control_sets -verbose -file top_level_wrapper_control_sets_placed.rpt
+| Design       : top_level_wrapper
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    16 |
+| Unused register locations in slices containing registers |    25 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            2 |
+|      5 |            1 |
+|      8 |            1 |
+|     15 |            2 |
+|    16+ |           10 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             796 |          183 |
+| No           | No                    | Yes                    |              20 |            5 |
+| No           | Yes                   | No                     |             250 |           56 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             133 |           49 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  Clock Signal  |             Enable Signal             |                                                                                                    Set/Reset Signal                                                                                                    | Slice Load Count | Bel Load Count |
++----------------+---------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                                       | arithmetic_i/div_gen_0_i/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/CARRYS_OUT[1]                                |                1 |              4 |
+|  clk_IBUF_BUFG |                                       | arithmetic_i/div_gen_0_i/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/FIX_TO_FLT_OP.SPD.OP/LZE/ZERO_DET_CC_1/CHAIN_GEN[0].CARRYS_DEL.NEED_DEL.CARRYS_FD_0 |                1 |              4 |
+|  clk_IBUF_BUFG | calculator_fsm_i/op_nxt               | all_clear_i/reset                                                                                                                                                                                                      |                2 |              5 |
+|  clk_IBUF_BUFG |                                       | arithmetic_i/div_gen_0_i/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fix_prenorm.i_prenormalizer/i_layer[2].i_shift_ctrl/first_q[3]                                               |                3 |              8 |
+|  clk_IBUF_BUFG |                                       | arithmetic_i/div_gen_0_i/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/FIX_TO_FLT_OP.SPD.OP/EXP/ZERO_DELAY/i_pipe/op_state[0]                              |                5 |             15 |
+|  clk_IBUF_BUFG |                                       | arithmetic_i/div_gen_0_i/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_nd_del/opt_has_pipe.i_pipe[3].pipe_reg[3][0]_0                                              |                2 |             15 |
+|  clk_IBUF_BUFG | calculator_fsm_i/op_ff_reg[0]_1[0]    | all_clear_i/reset                                                                                                                                                                                                      |                6 |             16 |
+|  clk_IBUF_BUFG | calculator_fsm_i/E[0]                 | all_clear_i/reset                                                                                                                                                                                                      |                5 |             16 |
+|  clk_IBUF_BUFG |                                       | arithmetic_i/div_gen_0_i/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fix_prenorm.i_prenormalizer/i_layer[4].i_shift_ctrl/first_q[5]                                               |                8 |             31 |
+|  clk_IBUF_BUFG |                                       | arithmetic_i/div_gen_0_i/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_iterative_unit/i_splice[2].i_residue_reg/NEW_CODE.ND_DEL.nd_d1_reg                                           |                5 |             32 |
+|  clk_IBUF_BUFG | calculator_fsm_i/state_ff_reg[2]_0[0] | all_clear_i/reset                                                                                                                                                                                                      |               11 |             32 |
+|  clk_IBUF_BUFG | all_clear_i/sel                       | all_clear_i/btn[1]                                                                                                                                                                                                     |                8 |             32 |
+|  clk_IBUF_BUFG | calculator_fsm_i/op_ff_reg[0]_0[0]    | all_clear_i/reset                                                                                                                                                                                                      |               17 |             32 |
+|  clk_IBUF_BUFG |                                       | arithmetic_i/div_gen_0_i/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/nd_d1                                                                                                          |               13 |             72 |
+|  clk_IBUF_BUFG |                                       | all_clear_i/reset                                                                                                                                                                                                      |               23 |             89 |
+|  clk_IBUF_BUFG |                                       |                                                                                                                                                                                                                        |              183 |            889 |
++----------------+---------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/FIR_Filter/FIR_Filter.runs/impl_1'
+HD_PWD='/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
